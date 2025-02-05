@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 import base64
 
+if name == “main”:
+main()
 
 # Funktion för att konvertera bild till base64
 def get_image_base64(image_path):
