@@ -65,7 +65,8 @@ elif kategori == "Energi":
 # Ladda bilder (måste finnas i samma mapp som scriptet eller en webbadress)
 bildmap = {}
 for namn, data in klossar.items():
-    bild = Image.open(data["bild"])
+    bildpath = data["bild"]  # Ingen mapp, bara bildfilens namn
+    bild = Image.open(bildpath)
     bild = bild.resize((int(bild.width / 4), int(bild.height / 4)))  # Gör bilden mindre
     bildmap[namn] = bild
 
